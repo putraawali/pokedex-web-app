@@ -1,18 +1,17 @@
 <template>
   <v-sheet
-    class="my-4 mx-16"
+    class="my-4 mx-16 pb-4"
     outlined
     rounded="xl"
     color="rgba(255, 255, 255, 0.4)"
     style="border-witdh: 10px; border-color: grey"
-    height="91vh"
   >
     <v-container>
       <center>
-        <p class="mt-auto" style="font-size: 4rem">Vukedex!</p>
+        <p style="font-size: 5vw">Vukedex!</p>
       </center>
       <center>
-        <p style="font-size: 1.5rem">All your favorite pokemon, are here!</p>
+        <p style="font-size: 3.5vw">All your favorite pokemon, are here!</p>
       </center>
       <v-row>
         <v-btn
@@ -23,7 +22,7 @@
           rounded
           color="#4a266a"
         >
-          find all pokemon
+          all pokemon
         </v-btn>
       </v-row>
       <v-row>

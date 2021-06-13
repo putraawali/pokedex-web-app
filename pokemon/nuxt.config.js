@@ -6,8 +6,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: "%s - pokemon",
-    title: "pokemon",
+    titleTemplate: "%s",
+    title: "Vukedex",
     htmlAttrs: {
       lang: "en",
     },
