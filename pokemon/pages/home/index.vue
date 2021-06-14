@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row justify="center" align="center">
+    <v-row v-if="allPokemon.length === 20" justify="center" align="center">
       <v-col
         v-for="(pokemon, i) in allPokemon"
         :key="i"
@@ -13,6 +13,7 @@
       </v-col>
     </v-row>
     <div
+      v-if="allPokemon.length === 20"
       style="justify-content: center; align-items: center; display: flex"
       class="my-4"
     >
@@ -39,14 +40,17 @@
         <v-icon>mdi-arrow-right</v-icon>
       </v-btn>
     </div>
+    <loading v-else />
   </v-container>
 </template>
 
 <script>
 import CardAllPokemon from "../../components/CardAllPokemon.vue";
+import loading from "../../layouts/loading.vue";
 export default {
   components: {
     CardAllPokemon,
+    loading,
   },
   methods: {
     nextPage() {
@@ -67,6 +71,9 @@ export default {
   created() {
     this.allPokemon;
     this.pagination;
+  },
+  beforeCreate() {
+    this.$store.dispatch("getAllPokemon");
   },
 };
 </script>

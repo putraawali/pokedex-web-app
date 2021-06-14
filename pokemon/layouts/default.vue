@@ -63,6 +63,8 @@ export default {
     },
     seeDetail(selected) {
       this.$router.push(`/detail/${selected.toLowerCase()}`);
+      this.select = null;
+      this.show = false;
     },
     capitalize(text) {
       return text.charAt(0).toUpperCase() + text.slice(1);
@@ -87,11 +89,11 @@ export default {
       return this.$store.state.searchList;
     },
   },
-  beforeCreate() {
-    this.$store.dispatch("getPokemonForSearch");
-  },
   created() {
     this.searchList;
+  },
+  beforeCreate() {
+    this.$store.dispatch("getPokemonForSearch");
   },
 };
 </script>

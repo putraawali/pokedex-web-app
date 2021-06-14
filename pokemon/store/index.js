@@ -99,7 +99,7 @@ export const actions = {
     commit("detailPokemon", detailPokemon);
   },
   async getPokemonForSearch({ commit }) {
-    const response = await this.$axios.get(`${pokeURL}?limit=500`);
+    const response = await this.$axios.get(`${pokeURL}?limit=1000`);
     const pokemonList = response.data.results.map(
       (el) => el.name.charAt(0).toUpperCase() + el.name.slice(1)
     );
